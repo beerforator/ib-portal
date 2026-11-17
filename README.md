@@ -40,3 +40,9 @@ docker network rm ib-portal_default
 docker volume rm ib-portal-source ib-portal-cms ib-portal-db ib-portal-private
 docker image rm ib-portal-php:8.2
 ```
+
+
+
+
+После установки InstantCMS и компонента выполни из корня клонированного репозитория:
+sudo -u www-data php bin/restore-content.php /var/www/ib-portal
