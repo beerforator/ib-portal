@@ -1,0 +1,134 @@
+{
+    "format": 1,
+    "tables": {
+        "settings": {
+            "site_name": "Портал ИБ",
+            "site_logo": "safeNIIP",
+            "home_accent": "в ваших руках.",
+            "home_intro": "Актуальные инструкции, новости и короткие проверки знаний для спокойной работы с информацией каждый день.",
+            "home_news_title": "Важное в фокусе",
+            "footer": "<p>© [year] Отдел Информационной Безопасности</p><p>Акционерное общество «ГосНИИП»</p>",
+            "title_home": "Безопасность",
+            "menu_home": "Главная",
+            "title_news": "Новости",
+            "menu_news": "Новости",
+            "title_documents": "Документы",
+            "menu_documents": "Документы",
+            "title_polls": "Тесты",
+            "menu_polls": "Тесты",
+            "title_password": "Генератор паролей",
+            "menu_password": "Генератор паролей",
+            "title_crypto": "Криптошлюз",
+            "menu_crypto": "Криптошлюз",
+            "memo_title": "Памятка сотрудника",
+            "memo_body": "<ul>\r\n<li>Блокируйте компьютер, когда уходите с рабочего места.</li>\r\n<li>Уточняйте у отправителя, если получили неожиданное вложение.</li>\r\n<li>Сообщайте о подозрительных письмах и инцидентах в отдел ИБ.</li>\r\n<li> </li>\r\n<li> </li>\r\n</ul>",
+            "crypto_body": "<p>По вопросам доступа, настройки и работы с криптошлюзом обращайтесь в отдел информационной безопасности.</p>",
+            "crypto_docs_title": "Документы по криптошлюзу"
+        },
+        "sections": [
+            {
+                "id": 1,
+                "title": "Инструкции"
+            },
+            {
+                "id": 2,
+                "title": "Регламенты"
+            }
+        ],
+        "news": [
+            {
+                "id": 2,
+                "title": "Проверьте настройки защиты учётной записи",
+                "body": "<p>Проверьте, используете ли вы отдельный пароль для рабочих сервисов и доступна ли дополнительная проверка при входе.</p>",
+                "picture": "7fa4e8515d93b371e669f07ba725b2cccecab1c4.png",
+                "published": 1,
+                "is_new": 0,
+                "views": 0,
+                "created_at": "2026-11-17 13:06:00"
+            },
+            {
+                "id": 1,
+                "title": "Как распознать подозрительное письмо",
+                "body": "<p>Проверьте адрес отправителя и убедитесь, что ожидали письмо. При сомнениях уточните подлинность сообщения по известному контакту.</p><p>[doc:1]</p>",
+                "picture": "d09f41bb833e2d29cba82ba41a3781c8935c5f8c.png",
+                "published": 1,
+                "is_new": 1,
+                "views": 0,
+                "created_at": "2026-11-17 13:06:00"
+            }
+        ],
+        "docs": [
+            {
+                "id": 1,
+                "section_id": 1,
+                "title": "Памятка о подозрительных письмах",
+                "file_key": "243ea3fd5e4acf69132eeb1f4a1a3da51ee47c7a.pdf",
+                "file_name": "email-guide.pdf",
+                "mime": "application/pdf",
+                "file_size": 677,
+                "published": 1,
+                "position": 0,
+                "created_at": "2026-11-17 13:06:00",
+                "for_crypto": 0
+            },
+            {
+                "id": 2,
+                "section_id": 1,
+                "title": "Инструкция по паролям",
+                "file_key": "760990625ee02b589357b7355d86e298142dbe4d.pdf",
+                "file_name": "password-guide.pdf",
+                "mime": "application/pdf",
+                "file_size": 665,
+                "published": 1,
+                "position": 0,
+                "created_at": "2026-11-17 13:06:00",
+                "for_crypto": 0
+            },
+            {
+                "id": 3,
+                "section_id": 1,
+                "title": "Куда сообщить об инциденте",
+                "file_key": "6a3b87fafe72f6281d702a96bbb5646de7c5bfe5.txt",
+                "file_name": "incident-guide.txt",
+                "mime": "text/plain",
+                "file_size": 59,
+                "published": 1,
+                "position": 0,
+                "created_at": "2026-11-17 13:06:00",
+                "for_crypto": 0
+            },
+            {
+                "id": 4,
+                "section_id": 2,
+                "title": "Правила работы с файлами",
+                "file_key": "90d008ea43a318f5b7792cda5fb17a597c86a807.pdf",
+                "file_name": "file-policy.pdf",
+                "mime": "application/pdf",
+                "file_size": 671,
+                "published": 1,
+                "position": 0,
+                "created_at": "2026-11-17 13:06:00",
+                "for_crypto": 0
+            }
+        ],
+        "tests": [
+            {
+                "id": 1,
+                "title": "Основы информационной безопасности",
+                "description": "Три вопроса о работе с почтой, паролями и документами.",
+                "questions": "[{\"question\":\"Что делать с неожиданным вложением?\",\"answers\":[\"Уточнить у отправителя\",\"Сразу открыть\",\"Переслать коллегам\"],\"correct\":0},{\"question\":\"Какой подход к рабочим паролям лучше?\",\"answers\":[\"Один общий пароль\",\"Уникальные пароли\",\"Одинаковый пароль с разными цифрами\"],\"correct\":1},{\"question\":\"Кому сообщить о подозрительной активности?\",\"answers\":[\"Никому\",\"Внешнему адресату\",\"Отделу ИБ\"],\"correct\":2}]",
+                "revision": "c77ece7d2f6df9e49eae1059053a0396",
+                "published": 1,
+                "position": 0
+            }
+        ]
+    },
+    "files": {
+        "243ea3fd5e4acf69132eeb1f4a1a3da51ee47c7a.pdf": "9a88f49f94c6ab49839a38b06fb7133f0daba76d59babb915f4df5e1cb4751cb",
+        "6a3b87fafe72f6281d702a96bbb5646de7c5bfe5.txt": "270ba30b5caf755fadfba811b80882b4f76eaf8c487a6e138dc4d839d974d9a7",
+        "760990625ee02b589357b7355d86e298142dbe4d.pdf": "395333f5b3e47a45420c6f9ca126cf87e725fc2f3b9c28c7e3fe888375308ad3",
+        "7fa4e8515d93b371e669f07ba725b2cccecab1c4.png": "19d6908421c9b86c96569b01988a090e3e2f9dd1d3ff8984ee445ed251fef202",
+        "90d008ea43a318f5b7792cda5fb17a597c86a807.pdf": "250605713d4de2e657d5bf0062a612b8d6167de412324c095ae0d04261cc959d",
+        "d09f41bb833e2d29cba82ba41a3781c8935c5f8c.png": "360ef1d853216a868c238e01a27a2d77aaf56eb96902a81a9acbce4b43647d0a"
+    }
+}

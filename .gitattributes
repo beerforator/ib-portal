@@ -1,0 +1,4 @@
+* text=auto
+database/initial-content/files/** -text
+*.pdf binary
+*.png binary

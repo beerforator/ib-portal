@@ -1,0 +1,19 @@
+.ib-admin nav { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.5rem }
+.ib-editor { display:grid; gap:1rem; max-width:850px; margin-bottom:2rem }
+.ib-editor label { display:block; margin:0 }
+.ib-editor input:not([type=checkbox],[type=radio]), .ib-editor textarea, .ib-editor select { margin-top:.3rem }
+.ib-questions fieldset { border:1px solid #d4dde8; padding:1rem; margin:1rem 0 }
+.ib-questions legend { width:auto; padding:0 .5rem; font-size:1rem }
+.ib-answer { display:grid; grid-template-columns:auto 1fr auto; gap:.5rem; align-items:center; margin:.4rem 0 }
+.ib-answer input[type=text] { margin:0 }
+
+.ib-inline-image {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    align-items: end;
+    gap: .5rem;
+    padding: .75rem;
+    border: 1px solid #d4dde8;
+    border-radius: .5rem;
+}
+.ib-inline-image [role=status] { grid-column: 1 / -1; }
