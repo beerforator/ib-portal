@@ -46,3 +46,68 @@ docker image rm ib-portal-php:8.2
 
 После установки InstantCMS и компонента выполни из корня клонированного репозитория:
 sudo -u www-data php bin/restore-content.php /var/www/ib-portal
+
+
+
+
+
+
+sudo bash <<'SH'
+set -euo pipefail
+umask 077
+
+WORK=$(mktemp -d /root/ib-export.XXXXXX)
+ARCHIVE=/root/ib-portal-transfer.tar.gz
+
+# Сохраняем настройки для сверки
+cp /etc/apache2/apache2.conf \
+   "$WORK/apache2.conf.reference"
+
+# Останавливаем сайт на время резервного копирования
+systemctl stop apache2
+trap 'systemctl start apache2' EXIT
+
+# Экспортируем базу данных
+mariadb-dump \
+  --single-transaction \
+  --quick \
+  --routines \
+  --triggers \
+  --events \
+  --default-character-set=utf8mb4 \
+  ib_portal > "$WORK/ib_portal.sql"
+
+test -s "$WORK/ib_portal.sql"
+
+# Необязательные дополнительные файлы
+EXTRA=()
+
+if [ -f /etc/php/8.2/apache2/conf.d/99-ib-portal.ini ]; then
+    EXTRA+=(etc/php/8.2/apache2/conf.d/99-ib-portal.ini)
+fi
+
+if [ -d /srv/ib-portal-src ]; then
+    EXTRA+=(srv/ib-portal-src)
+fi
+
+# Собираем всё в один архив
+tar --acls --xattrs -czpf "$ARCHIVE" \
+  -C / \
+  var/www/ib-portal \
+  var/lib/ib-portal \
+  etc/apache2/sites-available/ib-portal.conf \
+  "${EXTRA[@]}" \
+  -C "$WORK" \
+  ib_portal.sql \
+  apache2.conf.reference
+
+# Проверяем целостность архива
+tar -tzf "$ARCHIVE" >/dev/null
+
+cd /root
+sha256sum ib-portal-transfer.tar.gz \
+  > ib-portal-transfer.tar.gz.sha256
+
+echo "Резервная копия успешно создана:"
+ls -lh "$ARCHIVE"
+SH
